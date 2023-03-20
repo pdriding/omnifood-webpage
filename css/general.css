@@ -28,8 +28,11 @@ Primary: #e67e22
 Tints:
 #fdf2e9
 #fae5d3
+#eb984e
 
-Shades: #cf711f;
+Shades: 
+#cf711f;
+#45260a
 Accents:
 Greys: 
 #555
@@ -38,6 +41,8 @@ Greys:
 
 
 ---- 05 SHADOWS
+
+0 2.4rem 4.8rem rgba(0, 0, 0, 0.1);
 
 ---- 06 BORDER-RADIUS
 
@@ -109,6 +114,7 @@ body {
   align-items: center;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -117,6 +123,11 @@ body {
   font-weight: 600;
   padding: 1.6rem 3.2rem;
   border-radius: 9px;
+
+  /* Only necessary for the btn itself */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 
   /* transition: background-color 0.3s; */
   transition: all 0.3s;
@@ -146,6 +157,18 @@ body {
   /* border: 3px solid #fff; */
   /* Trick to add border to inner */
   box-shadow: inset 0 0 0 3px #fff;
+}
+
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
 }
 
 .link:link,
@@ -184,6 +207,13 @@ body {
   height: 3rem;
   width: 3rem;
   color: #e67e22;
+}
+
+*:focus {
+  outline: none;
+  /* outline: 4px dotted #e67e22;
+  outline-offset: 8px; */
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
 }
 
 .margin-right-sm {
